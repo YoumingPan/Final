@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youming Pan</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="navbar bg-yellow-300">
+        <div class="navbar-start">
+
+        </div>
+        <div class="navbar-center">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                <div class="w-10 rounded-full">
+                    <img src="images/logo.png" />
+                </div>
+            </label>
+            <div class="normal-case font-semibold sm:text-2xl md:text-3xl">Basketball Community</div>
+        </div>
+        <div class="navbar-end">
+
+        </div>
+    </div>
+    <!-- Mobile -->
+    <div class="navbar bg-yellow-100" id="navbarSmall">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </label>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="index.html">Home page</a></li>
+                    <li><a href="https://www.nba.com/">NBA</a></li>
+                    <li><a href="https://www.cbaleague.com/#/">CBA</a></li>
+                    <li><a href="example.html">Community</a></li>
+                    <li><a href="example1.html">Event</a></li>
+                    <li><a href="example2.html">News</a></li>
+                    <li><a href="example3.html">Basketball Court</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-center">
+            <form class="join">
+                <div class="form-control join-item">
+                    <input type="text" placeholder="Search" class="input input-bordered h-10 sm:h-12" />
+                </div>
+                <button class="btn btn-primary h-10 btn-xs sm:btn-sm md:btn-md join-item">submit</button>
+            </form>
+        </div>
+        <div class="navbar-end">
+            <a class="btn btn-ghost normal-case sm:text-xl" href="#">login</a>
+        </div>
+    </div>
+    <!-- PC -->
+    <div class="navbar bg-red-100 join" id="navbarLarge">
+        <div class="navbar-start join-item">
+            <a class="btn btn-ghost normal-case md:text-md sm:text-sm" href="index.html">Home page</a>
+            <a class="btn btn-ghost normal-case md:text-md sm:text-sm" href="https://www.nba.com/">NBA</a>
+            <a class="btn btn-ghost normal-case md:text-md sm:text-sm" href="https://www.cbaleague.com/#/">CBA</a>
+            <a class="btn btn-ghost normal-case md:text-md sm:text-sm" href="example.html">Community</a>
+            <a class="btn btn-ghost normal-case md:text-md sm:text-sm" href="example1.html">Event</a>
+            <a class="btn btn-ghost normal-case md:text-md sm:text-sm" href="example2.html">News</a>
+            <a class="btn btn-ghost normal-case md:text-md sm:text-sm" href="example3.html">Basketball Court</a>
+        </div>
+        <div class="navbar-center join-item ml-80">
+            <form class="join">
+                <div class="form-control join-item">
+                    <input type="text" placeholder="Search" class="input input-bordered h-10 sm:h-12" />
+                </div>
+                <button class="btn btn-primary h-10 btn-xs sm:btn-sm md:btn-md">submit</button>
+            </form>
+        </div>
+        <div class="navbar-end join-item">
+            <a class="btn btn-ghost normal-case sm:text-xl" href="#">login</a>
+        </div>
+    </div>
+
+    <!-- body -->
+    <img src="images/score.png" />
+    <div class="grid gap-8 md:grid-cols-2 md:items-centerd md:text-left md:max-xl:bg-blue-50 md:max-xl:p-9">
+        <div class="carousel w-full relative">
+            <div id="slide1" class="carousel-item w-full">
+                <div class="group">
+                    <img src="images/1.jpg" class="bg-fixed w-full rounded-lg" />
+                    <div
+                        class="absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-40 bg-black text-white p-4 transition duration-300">
+                        <h3>Image 1 Title</h3>
+                        <p>Description for Image 1</p>
+                    </div>
+                </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+                <div class="group">
+                    <img src="images/2.jpg" class="bg-fixed w-full rounded-lg" />
+                    <div
+                        class="absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-40 bg-black text-white p-4 transition duration-300">
+                        <h3>Image 2 Title</h3>
+                        <p>Description for Image 2</p>
+                    </div>
+                </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+                <div class="group">
+                    <img src="images/3.jpg" class="bg-fixed w-full rounded-lg" />
+                    <div
+                        class="absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-40 bg-black text-white p-4 transition duration-300">
+                        <h3>Image 3 Title</h3>
+                        <p>Description for Image 3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a class="btn btn-circle" onclick="changeSlide(-1)">❮</a>
+                <a class="btn btn-circle" onclick="changeSlide(1)">❯</a>
+            </div>
+        </div>
+
+        <div class="w-full">
+            <h1 class="mb-2 text-3xl font-medium font-semibold">Comment area:</h1>
+            <div class="flex flex-col">
+                <div class="grid card bg-base-300 rounded-box p-4">
+                    <h1 class="mb-2 text-2xl font-medium">@blank9155</h1>
+                    <p class="text-">2周前</p>
+                    <div class="rating">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <p>
+                        I was having trouble understanding breakpoints and how to implement Tailwind for responsive
+                        resizing
+                        but
+                        this video made
+                        it so much clearer!! Thank you and looking forward to more videos! 😁
+                    </p>
+                </div>
+                <div class="divider"></div>
+                <div class="grid card bg-base-300 rounded-box p-4">
+                    <h1 class="mb-2 text-2xl font-medium">@blank9155</h1>
+                    <p class="text-">2周前</p>
+                    <div class="rating">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <p>
+                        I was having trouble understanding breakpoints and how to implement Tailwind for responsive
+                        resizing
+                        but
+                        this video made
+                        it so much clearer!! Thank you and looking forward to more videos! 😁
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content mt-4 bg-yellow-300">
+        <div>
+            <p>Copyright © 2023 - All right reserved by Youming Pan</p>
+        </div>
+    </footer>
+</body>
+<!-- js code -->
+<script>
+
+    // Rotation chart
+    let slideIndex = 1;
+    let autoSlideInterval;
+
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(function () {
+            changeSlide(1);
+        }, 3000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+
+    function changeSlide(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        const slides = document.getElementsByClassName("carousel-item");
+
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+    }
+
+    function manualChangeSlide(n) {
+        stopAutoSlide();
+        changeSlide(n);
+        startAutoSlide();
+    }
+    startAutoSlide();
+
+    // navbar
+    const navbarSmall = document.getElementById('navbarSmall');
+    const navbarLarge = document.getElementById('navbarLarge');
+
+    function checkScreenSize() {
+        if (window.innerWidth <= 768) {
+            navbarSmall.classList.remove('hidden');
+            navbarLarge.classList.add('hidden');
+        } else {
+            navbarSmall.classList.add('hidden');
+            navbarLarge.classList.remove('hidden');
+        }
+    }
+
+    checkScreenSize();
+
+    window.addEventListener('resize', checkScreenSize);
+
+
+</script>
+
+</html>

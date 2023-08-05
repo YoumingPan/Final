@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="navbar bg-yellow-300">
+        <div class="navbar-start">
+
+        </div>
+        <div class="navbar-center">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                <div class="w-10 rounded-full">
+                    <img src="images/logo.png" />
+                </div>
+            </label>
+            <div class="normal-case font-semibold sm:text-2xl md:text-3xl">Basketball Community</div>
+        </div>
+        <div class="navbar-end">
+
+        </div>
+    </div>
+    <!-- Mobile -->
+    <div class="navbar bg-yellow-100" id="navbarSmall">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </label>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="index.html">Home page</a></li>
+                    <li><a href="https://www.nba.com/">NBA</a></li>
+                    <li><a href="https://www.cbaleague.com/#/">CBA</a></li>
+                    <li><a href="example.html">Community</a></li>
+                    <li><a href="example1.html">Event</a></li>
+                    <li><a href="example2.html">News</a></li>
+                    <li><a href="example3.html">Basketball Court</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-center">
+            <form class="join">
+                <div class="form-control join-item">
+                    <input type="text" placeholder="Search" class="input input-bordered h-10 sm:h-12" />
+                </div>
+                <button class="btn btn-primary h-10 btn-xs sm:btn-sm md:btn-md join-item">submit</button>
+            </form>
+        </div>
+        <div class="navbar-end">
+            <a class="btn btn-ghost normal-case sm:text-xl" href="#">login</a>
+        </div>
+    </div>
+    <!-- PC -->
+    <div class="navbar bg-red-100 join" id="navbarLarge">
+        <div class="navbar-start join-item">
+            <a class="btn btn-ghost normal-case md:text-md sm:text-sm" href="index.html">Home page</a>
+            <a class="btn btn-ghost normal-case md:text-md sm:text-sm" href="https://www.nba.com/">NBA</a>
+            <a class="btn btn-ghost normal-case md:text-md sm:text-sm" href="https://www.cbaleague.com/#/">CBA</a>
+            <a class="btn btn-ghost normal-case md:text-md sm:text-sm" href="example.html">Community</a>
+            <a class="btn btn-ghost normal-case md:text-md sm:text-sm" href="example1.html">Event</a>
+            <a class="btn btn-ghost normal-case md:text-md sm:text-sm" href="example2.html">News</a>
+            <a class="btn btn-ghost normal-case md:text-md sm:text-sm" href="example3.html">Basketball Court</a>
+        </div>
+        <div class="navbar-center join-item ml-20">
+            <form class="join">
+                <div class="form-control join-item">
+                    <input type="text" placeholder="Search" class="input input-bordered h-10 sm:h-12" />
+                </div>
+                <button class="btn btn-primary h-10 btn-xs sm:btn-sm md:btn-md">submit</button>
+            </form>
+        </div>
+        <div class="navbar-end join-item">
+            <a class="btn btn-ghost normal-case sm:text-xl" href="#">login</a>
+        </div>
+    </div>
+
+    <!-- body -->
+    <div class="h-96">
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+        literature
+        from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+        Virginia,
+        looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the
+        cites of
+        the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+        1.10.33
+        of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a
+        treatise
+        on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor
+        sit
+        amet..", comes from a line in section 1.10.32.
+    </div>
+    <!-- footer -->
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content mt-4 bg-yellow-300">
+        <div>
+            <p>Copyright © 2023 - All right reserved by Youming Pan</p>
+        </div>
+    </footer>
+</body>
+<script>
+    // navbar
+    const navbarSmall = document.getElementById('navbarSmall');
+    const navbarLarge = document.getElementById('navbarLarge');
+
+    function checkScreenSize() {
+        if (window.innerWidth <= 768) {
+            navbarSmall.classList.remove('hidden');
+            navbarLarge.classList.add('hidden');
+        } else {
+            navbarSmall.classList.add('hidden');
+            navbarLarge.classList.remove('hidden');
+        }
+    }
+
+    checkScreenSize();
+
+    window.addEventListener('resize', checkScreenSize);
+</script>
+
+</html>
